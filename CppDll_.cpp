@@ -115,12 +115,7 @@ template <typename T>
 void print_buffer(void* buffer) {
 	T* typed_buffer = static_cast<T*>(buffer);
 	size_t data_size = sizeof(buffer);
-	/*for (size_t i = 0; i != '\n'; ++i) {
-		std::cerr << typed_buffer[i];
-	}*/
-	//for (size_t i = 0; typed_buffer[i] < 5000; ++i) {			// THIS CAUSES BUFFER OVERFLOW -> YOU SEE MORE DATA THAN INTENDED
-	//	std::cerr << typed_buffer[i];
-	//}
+
 	for (size_t i = 0; typed_buffer[i] < 1000; ++i) {
 		std::cerr << typed_buffer[i];
 	}
